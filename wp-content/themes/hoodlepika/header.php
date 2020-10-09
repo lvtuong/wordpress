@@ -15,3 +15,8 @@
     <div class="logo">
         <?php pika_header() ?>
     </div>
+    <!--     view post...-->
+    <?php echo do_shortcode("[bartag baz= fire]"); ?>
+    <?php print_r(get_post()->post_content); ?>
+
+

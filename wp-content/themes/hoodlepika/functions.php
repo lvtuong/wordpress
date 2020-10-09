@@ -74,24 +74,70 @@ if (!function_exists('pika_header')) {
     function pika_header()
     { ?>
         <div class="site-name">
-        <?php
-        if (is_home()) {
-            printf('<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
-                get_bloginfo('url'),
-                get_bloginfo('description'),
-                get_bloginfo('sitename'));
-        } else {
-            printf('<p><a href="%1$s" title="%2$s">%3$s</a></p>',
-                get_bloginfo('url'),
-                get_bloginfo('description'),
-                get_bloginfo('sitename'));
-        }
-        ?>
+            <?php
+            if (is_home()) {
+                printf('<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                    get_bloginfo('url'),
+                    get_bloginfo('description'),
+                    get_bloginfo('sitename'));
+            } else {
+                printf('<p><a href="%1$s" title="%2$s">%3$s</a></p>',
+                    get_bloginfo('url'),
+                    get_bloginfo('description'),
+                    get_bloginfo('sitename'));
+            }
+            ?>
         </div>
-        <div class="site-description"><?php   bloginfo('description')  ?></div>
+        <div class="site-description"><?php bloginfo('description') ?></div>
 
 
         <?php
     }
 }
 
+/** shortcode */
+
+add_shortcode('bartag', 'wpdocs_bartag_func');
+function wpdocs_bartag_func($atts)
+{
+    $atts = shortcode_atts(array(
+        'foo' => 'no foo',
+        'baz' => 'default baz'
+    ), $atts, 'bartag');
+    return "baz = {$atts['baz']}";
+}
+
+/** sap xep ngau nhien post va tick vao bai post nao  bai hien thi post day */
+add_shortcode('view_post', 'view_post');
+function view_post()
+{
+    $args = array(
+        'post_type' => 'post',
+        'orderby' => 'rand',
+        'posts_per_page' => 5,
+    );
+    $the_query = new WP_Query($args);
+    $string = '';
+    if ($the_query->have_posts()) {
+        $string .= '<ul>';
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+            $string .= '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+        }
+        $string .= '</ul>';
+        wp_reset_postdata();
+    } else {
+        $string .= 'no posts found';
+    }
+    return $string;
+}
+
+
+
+//add_post_meta(42, 'total_view', 60 );
+
+//global $wpdb;
+//$kq = $wpdb->get_results("Select meta_value FROM $wpdb->postmeta Where post_id = 42 AND meta_key = 'total_view'");
+//foreach ($kq as $kqarr) {
+//    print_r(" " . $kqarr->meta_value);
+//}

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef076a85-305e-42c3-acf7-9df6845978d2" name="Default Changelist" comment="" />
+    <list default="true" id="ef076a85-305e-42c3-acf7-9df6845978d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/plugins/fr-helloz/fr-helloz.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/fr-helloz/fr-helloz.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/hoodlepika/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/hoodlepika/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/hoodlepika/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/hoodlepika/header.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +23,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iXflMgKIGZJFCmJU5pX5xST67g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +56,8 @@
       <updated>1602059006781</updated>
       <workItem from="1602059007902" duration="6139000" />
       <workItem from="1602122442619" duration="4259000" />
-      <workItem from="1602128270212" duration="13905000" />
+      <workItem from="1602128270212" duration="15509000" />
+      <workItem from="1602208250951" duration="20057000" />
     </task>
     <servers />
   </component>
@@ -58,6 +69,10 @@
       <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="502" y="323" width="399" height="156" key="NewPhpFileDialog/48.27.1318.741@48.27.1318.741" timestamp="1602144329385" />
+    <state x="371" y="174" key="run.anything.popup" timestamp="1602228760718">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="371" y="174" key="run.anything.popup/48.27.1318.741@48.27.1318.741" timestamp="1602228760718" />
     <state x="370" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602130867082">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
